@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: #000000;
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== HEADER ===== */
+header {
+    padding: 24px;
+    color: #ffffff;
+    background: #000000;
+    text-align: center;
+}
+
+.header-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* ===== MAIN ===== */
+main {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 28px;
+    max-width: 1100px;
+    margin: 32px auto;
+    padding: 0 20px;
+    align-items: start;
+}
+
+/* ===== ASIDE / NAV ===== */
+#aside {
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 3px;
+}
+
+#aside h2 {
+    margin: 0 0 8px;
+    color: #000000;
+    font-size: 1.15rem;
+}
+
+#aside a {
+    padding: 11px 12px;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+#aside a:hover,
+#aside a:focus-visible {
+    color: #ffffff;
+    background: #000000;
+    outline: none;
+}
+
+/* ===== CONTENIDO ===== */
+.contenido {
+    display: grid;
+    gap: 20px;
+}
+
+.contenido section {
+    min-height: 180px;
+    padding: 24px;
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 3px;
+    scroll-margin-top: 20px;
+}
+
+.contenido h2 {
+    margin-top: 0;
+    color: #000000;
+}
+
+/* ===== FLEX DE SECCIONES (texto + imagen) ===== */
+.seccion-flex {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.seccion-flex .texto {
+    flex: 1;
+}
+
+.imagen-seccion {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 20px;
+    text-align: left;
+
+    border: 2px solid #000000;
+}
+
+footer a {
+    color: #000000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .seccion-flex {
+        flex-direction: column;
+    }
+
+    .imagen-seccion {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .header-contenido {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    #aside {
+        position: static;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .footer-marca {
+        justify-content: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+    .footer-derecha {
+        text-align: center;
+    }
+}
